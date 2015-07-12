@@ -1,8 +1,17 @@
 {
     "name": "yaro/cropp",
-    "description": "image manipulations on-the-fly for Laravel 5",
+    "description": "Image manipulations on-the-fly for Laravel 5",
+    "keywords": ["laravel", "image", "manipulations", "thumb"],
     "require": {
         "intervention/image": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yaro\\Cropp\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "license": "MIT",
     "authors": [

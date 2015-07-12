@@ -10,8 +10,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
     public function boot()
     {
-        $this->registerHelperFunction();
-        
         $this->publishes([
             __DIR__.'/config/cropp.php' => config_path('cropp.php'),
         ]);
@@ -26,9 +24,4 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         ]);
     } // end register
     
-    private function registerHelperFunction()
-    {
-        include __DIR__ .'/helpers.php';
-    } // end registerHelperFunction
-
 }
