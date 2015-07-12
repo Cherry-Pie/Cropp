@@ -1,0 +1,15 @@
+{
+    "name": "yaro/cropp",
+    "description": "image manipulations on-the-fly for Laravel 5",
+    "require": {
+        "intervention/image": "2.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaro",
+            "email": "12fcv4@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
