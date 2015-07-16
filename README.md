@@ -45,6 +45,8 @@ $thumbPath = cropp('image.jpg')->invert()->fit(320, 200)->src();
 ```
 You can also initialise Cropp without helper function:
 ```php
+use Yaro\Cropp\Cropp;
+
 $cropp = new Cropp('image.jpg', false);
 $src = $cropp->fit(320, 200)->src(); 
 echo $src; // /storage/cropp/44aead54d338966bca06535d34edc3ae.jpg
