@@ -11,7 +11,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/cropp.php' => config_path('cropp.php'),
+            __DIR__.'/config/cropp.php' => config_path('yaro.cropp.php'),
         ]);
     } // end boot
 
@@ -20,7 +20,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->app->register('Intervention\Image\ImageServiceProvider');
         
         config([
-            'config/cropp.php',
+            'config/yaro.cropp.php',
         ]);
     } // end register
     

@@ -23,7 +23,7 @@ class Cropp
         
         $source = public_path(ltrim($source, '/'));
         if (!is_readable($source)) {
-            $noImageSource = config('cropp.no_image_source', false);
+            $noImageSource = config('yaro.cropp.no_image_source', false);
             if (!$noImageSource) {
                 $this->isSkip = true;
                 return;
@@ -65,8 +65,8 @@ class Cropp
             return '';
         }
         
-        $quality = config('cropp.cache_quality', 90);
-        $cacheStorage = trim(config('cropp.cache_dir', 'storage/cropp'), '/');
+        $quality = config('yaro.cropp.cache_quality', 90);
+        $cacheStorage = trim(config('yaro.cropp.cache_dir', 'storage/cropp'), '/');
         
         $methodsHash = md5(serialize($this->methods));
         $hash = md5($this->fileHash . $methodsHash . $quality);
