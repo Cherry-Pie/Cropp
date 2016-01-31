@@ -76,13 +76,13 @@ class Cropp
             return $this->isAssetWrap ? asset($source) : $source;
         }
         
-        $image = Image::make($this->source);
-        
-        foreach ($this->methods as $method) {
-            call_user_func_array(array($image, $method['name']), $method['arguments']);
-        }
-        
         try {
+            $image = Image::make($this->source);
+            
+            foreach ($this->methods as $method) {
+                call_user_func_array(array($image, $method['name']), $method['arguments']);
+            }
+        
             $res = $image->save(public_path($source), $quality);
             if (!$res) {
                 throw new \RuntimeException(
